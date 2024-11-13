@@ -1,53 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/view/models/productmodel.dart';
 import 'package:flutter_project/view/services/electronicService.dart';
+import 'package:flutter_project/view/services/productservice.dart';
 import 'package:flutter_project/view/store.dart';
 
-import 'services/productservice.dart';
-
-class StoreRoom extends StatelessWidget {
- const StoreRoom({super.key});
+class StoreElectronics extends StatelessWidget {
+ const StoreElectronics({super.key});
 
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-      
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
+          backgroundColor: Colors.black,
+          leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () {
            
-          },
-        ),
-       actions: [
-        IconButton(
-          icon: const Icon(Icons.favorite, color: Colors.red),
-          onPressed: () {
-           
-          },
-        ),
-         IconButton(
-          icon: const Icon(Icons.share, color: Colors.black),
-          onPressed: () {
-           
-          },
-        ),
-         IconButton(
-          icon: const Icon(Icons.shopping_bag_outlined, color: Colors.black),
-          onPressed: () {
-           
-          },
-        ),
-       ],
+          },),
+          title: const Text("Electronics",
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.white,
+          ),),
       ),
       body:  Center(
         child: Column(
           children: [
             
             FutureBuilder<List<ProductModel>>(
-              future: getAllProducts(),
+              future: electronicsProductsList(),
               builder: (context, snapshot) {
                 // Loading State
             if (snapshot.connectionState == ConnectionState.waiting) {

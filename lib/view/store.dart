@@ -55,6 +55,7 @@ class Store extends StatelessWidget {
 
                       Text(rating.count.toString(),
                       style: const TextStyle(color: Colors.black, fontSize: 12),),
+                      const SizedBox(width: 30,),
 
 
                       const Icon(Icons.currency_rupee_sharp,

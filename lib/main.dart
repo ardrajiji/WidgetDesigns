@@ -10,6 +10,7 @@ import 'package:flutter_project/view/salescreen.dart';
 import 'package:flutter_project/view/sample_reg.dart';
 import 'package:flutter_project/view/shopGridView.dart';
 import 'package:flutter_project/view/store.dart';
+import 'package:flutter_project/view/storeElectronics.dart';
 import 'package:flutter_project/view/storeroom.dart';
 //import 'package:flutter_project/view/signup.dart';
 import 'package:flutter_project/view/NewPage.dart';
@@ -52,7 +53,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  const StoreRoom()
+      home:  const StoreElectronics()
     );
   }
 }
