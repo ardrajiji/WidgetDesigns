@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_project/view/storeproductlimil.dart';
 import 'package:flutter_project/widgets/storestack_widget.dart';
+
 
 
 class HomepageStore extends StatelessWidget {
@@ -17,22 +19,22 @@ class HomepageStore extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(238, 172,26, 1),
+        backgroundColor:  Colors.black,
         elevation: 0,
 
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () {
            
           },),
         
         actions: [
           IconButton(
-            icon: const Icon(Icons.message_sharp, color: Colors.black),
+            icon: const Icon(Icons.message_sharp, color: Colors.white),
             onPressed: () {},
           ),
           IconButton(
-            icon: const Icon(Icons.shopping_bag_outlined, color: Colors.black),
+            icon: const Icon(Icons.shopping_bag_outlined, color: Colors.white),
             onPressed: () {},
           ),
         ],
@@ -141,9 +143,36 @@ class HomepageStore extends StatelessWidget {
                   fontWeight: FontWeight.bold),
               ),
             ),
+            const StoreProductLimit(),
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color.fromARGB(255, 252, 239, 239),
+     items: const <BottomNavigationBarItem>[
+
+      BottomNavigationBarItem(
+        icon: Icon(Icons.home,
+        color: Colors.black,
+        size: 25,), 
+        label: 'Home'),
+
+      BottomNavigationBarItem(
+        icon: Icon(Icons.local_mall_rounded,
+        color: Colors.black,
+        size: 25,), 
+        label: 'Wallet',),
+
+
+      BottomNavigationBarItem(
+        icon: Icon(Icons.settings,
+        color: Colors.black,
+        size: 25,), 
+        label: 'Settings'),
+    ],
+    
+   ),
+
     );
   }
 }

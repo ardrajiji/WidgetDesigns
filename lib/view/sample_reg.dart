@@ -74,7 +74,9 @@ class Registration extends StatelessWidget {
           ),
         ),
 
-      )
+      ),
+
+      
     );
   }
 }

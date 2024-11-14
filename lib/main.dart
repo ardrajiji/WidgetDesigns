@@ -3,7 +3,8 @@ import 'package:flutter_project/view/card.dart';
 import 'package:flutter_project/view/gridView.dart';
 import 'package:flutter_project/view/gridView2.dart';
 import 'package:flutter_project/view/gridView2builder.dart';
-import 'package:flutter_project/view/homepage.dart';
+import 'package:flutter_project/view/sizedbox.dart';
+import 'package:flutter_project/view/storehomepage.dart';
 import 'package:flutter_project/view/listviewbuilder.dart';
 import 'package:flutter_project/view/newCard.dart';
 import 'package:flutter_project/view/salescreen.dart';
@@ -11,6 +12,9 @@ import 'package:flutter_project/view/sample_reg.dart';
 import 'package:flutter_project/view/shopGridView.dart';
 import 'package:flutter_project/view/store.dart';
 import 'package:flutter_project/view/storeElectronics.dart';
+import 'package:flutter_project/view/storeJewelry.dart';
+import 'package:flutter_project/view/storeMenscloth.dart';
+import 'package:flutter_project/view/storeproductlimil.dart';
 import 'package:flutter_project/view/storeroom.dart';
 //import 'package:flutter_project/view/signup.dart';
 import 'package:flutter_project/view/NewPage.dart';
@@ -21,6 +25,7 @@ import 'package:flutter_project/view/category.dart';
 import 'package:flutter_project/view/login.dart';
 import 'package:flutter_project/view/signin.dart';
 import 'package:flutter_project/view/loginpage.dart';
+import 'package:flutter_project/view/storewomenscloth.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,7 +58,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  const StoreElectronics()
+      home:   const HomepageStore()
     );
   }
 }
