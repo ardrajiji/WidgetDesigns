@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_project/view/storeJewelry.dart';
 import 'package:flutter_project/view/storeproductlimil.dart';
 import 'package:flutter_project/widgets/storestack_widget.dart';
 
@@ -108,26 +109,34 @@ class HomepageStore extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20,),
-            const Row(
+             Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-             CategoryWidget(
-              image:"assets/icons/icons8-gadgets-50.png",
-              category: 'Electronics',
-              
+
+
+             GestureDetector(
+                onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => const StoreJewelry(),));
+                },
+                child: const CategoryWidget(
+                  category: 'jewellery ',
+                  image: 'assets/icons/icons8-jewellery-100.png',
+                ),
+              ),
+
+
+             const SizedBox(width: 30,),
+              const CategoryWidget(
+                category: 'Electronics', 
+                image: 'assets/icons/icons8-gadgets-50.png',
              ),
-             SizedBox(width: 30,),
-              CategoryWidget(
-                category: 'jewellery', 
-                image: 'assets/icons/icons8-jewellery-100.png',
-             ),
-             SizedBox(width: 30,),
-              CategoryWidget(
+             const SizedBox(width: 30,),
+              const CategoryWidget(
                 category: 'Mens\nClothing', 
                 image: 'assets/icons/icons8-mens-hoodie-50.png',
              ),
-             SizedBox(width: 30,),
-              CategoryWidget(
+             const SizedBox(width: 30,),
+              const CategoryWidget(
                 category: 'Womens\nClothing', 
                 image: 'assets/icons/icons8-womens-t-shirt-50.png',
              )
