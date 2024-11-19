@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/view/models/productmodel.dart';
 
 class SaleScreen extends StatelessWidget {
-  const SaleScreen({super.key});
+  final int id;
+  final String image;
+  final String name;
+  final String price;
+  final Rating rating;
+  const SaleScreen({super.key,
+  required this.id,
+  required this.image,
+  required this.name,
+  required this.price,
+  required this.rating,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -44,12 +56,12 @@ class SaleScreen extends StatelessWidget {
                   const SizedBox(height: 10,),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),
-                    child: Image.asset('assets/images/jacket.png'),
+                    child: Image.asset(image),
                   ),
                   const SizedBox(height: 10,),
                    const Align(
                     alignment: Alignment.bottomLeft,
-                     child: Text("Essentials Men's Short Sleeve",
+                     child: Text(t,
                                      style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                    ),
               
@@ -180,9 +192,7 @@ class SaleScreen extends StatelessWidget {
 
 
                     )
-              
-                  
-                    ],
+                   ],
                   )
                   
                 ],

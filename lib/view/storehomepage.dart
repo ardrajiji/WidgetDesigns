@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_project/view/storeElectronics.dart';
 import 'package:flutter_project/view/storeJewelry.dart';
+import 'package:flutter_project/view/storeMenscloth.dart';
 import 'package:flutter_project/view/storeproductlimil.dart';
+import 'package:flutter_project/view/storewomenscloth.dart';
 import 'package:flutter_project/widgets/storestack_widget.dart';
 
 
@@ -126,20 +129,39 @@ class HomepageStore extends StatelessWidget {
 
 
              const SizedBox(width: 30,),
-              const CategoryWidget(
-                category: 'Electronics', 
-                image: 'assets/icons/icons8-gadgets-50.png',
-             ),
+
+             GestureDetector(
+                onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => const StoreElectronics(),));
+                },
+                child: const CategoryWidget(
+                  category: 'Electronics ',
+                  image: 'assets/icons/icons8-gadgets-50.png',
+                ),
+              ),
+
              const SizedBox(width: 30,),
-              const CategoryWidget(
-                category: 'Mens\nClothing', 
-                image: 'assets/icons/icons8-mens-hoodie-50.png',
-             ),
+
+             GestureDetector(
+                onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => const StoreMenscloth(),));
+                },
+                child: const CategoryWidget(
+                  category: 'Mens\nClothing',
+                  image: 'assets/icons/icons8-mens-hoodie-50.png',
+                ),
+              ),
              const SizedBox(width: 30,),
-              const CategoryWidget(
-                category: 'Womens\nClothing', 
-                image: 'assets/icons/icons8-womens-t-shirt-50.png',
-             )
+             
+             GestureDetector(
+                onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => const StoreWomenscloth(),));
+                },
+                child: const CategoryWidget(
+                  category: 'Womens\nClothing',
+                  image: 'assets/icons/icons8-womens-t-shirt-50.png',
+                ),
+              ),
             ],
           ),
             const SizedBox(height: 20),

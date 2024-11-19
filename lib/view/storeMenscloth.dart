@@ -15,7 +15,7 @@ class StoreMenscloth extends StatelessWidget {
           leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () {
-           
+           Navigator.of(context).pop();
           },),
           title: const Text("Men's Clothing",
           style: TextStyle(

@@ -3,7 +3,7 @@ import 'package:flutter_project/view/card.dart';
 import 'package:flutter_project/view/gridView.dart';
 import 'package:flutter_project/view/gridView2.dart';
 import 'package:flutter_project/view/gridView2builder.dart';
-import 'package:flutter_project/view/sizedBox_.dart';
+
 import 'package:flutter_project/view/storehomepage.dart';
 import 'package:flutter_project/view/listviewbuilder.dart';
 import 'package:flutter_project/view/newCard.dart';
@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:   const HomepageStore()
+      home:   const SaleScreen()
     );
   }
 }

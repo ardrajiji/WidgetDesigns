@@ -5,5 +5,6 @@ class StoreUrl {
  static const String menclUrl = "https://fakestoreapi.com/products/category/men's%20clothing";
  static const String womenclUrl = "https://fakestoreapi.com/products/category/women's%20clothing";
  static const String limiturl = "https://fakestoreapi.com/products?limit=8";
+ static const String singleProducturl = "https://fakestoreapi.com/products";
 
 }
